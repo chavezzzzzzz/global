@@ -1,0 +1,166 @@
+
+
+
+<!-- this is the last project I have completed and as of now I feel like arranging the elements in a numerical order from top to bottom based on the tag name is the best way to organize them-->
+<!-- sometimes exceptions occur and the number will start with 0 instead of 1 and sometimes just random things will pop-up but for the most part I try to keep this pattern to traverse the dom easier -->
+<!-- the way in which the elements correspond to the css file is something I explain in notes on the css file to make it easier to traverse the css file -->
+<!-- Also, its important to mention that when creating the website there are many times when unexpected modifications occur and it will mess up the order of the element numbers -->
+<!-- however, not having to worry about this and just assigning a temporary id for the moment helps the creative process flow more freely and I just rearrange the order at the very end with a simple process that I use -->
+<!-- Also, typically with the navbar I will leave comments expaining its outlay in the index.html file instead of every single file it is used in -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@600&family=Carter+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&family=Vast+Shadow&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- divI0 is the mobile menu -->
+    <div id="divI0">
+        <div id="divI1">
+            <img id="imgI0" src="./images/exit.png" onclick="mobileNavExit()">
+        </div>
+        <div id="divI2">
+            <a href="./login.html" style="text-decoration: none;"><button id="buttonI0">Login</button></a>
+            <button id="buttonI1" onclick="view()">Shopping<br>Cart</button>
+        </div>
+        <ul id="ulI0">
+            <a href="./index.html" style="text-decoration: none;"><li id="liI0" class="liMOBILENAV">Home</li></a>
+            <li id="liI1" class="liMOBILENAV" onclick="mobileItems()">Coffees & Teas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></li>
+            <a href="./subscription.html" style="text-decoration: none;"><li id="liI2" class="liMOBILENAV">Subscription</li></a>
+            <a href="./about.html" style="text-decoration: none;"><li id="liI3" class="liMOBILENAV">About</li></a>
+        </ul>
+    </div>
+    <!-- divI13 is the mobile coffees and teas menu -->
+    <div id="divI3">
+        <div id="divI4">
+            <img id="imgI1" src="./images/exit.png" onclick="mobileItemsExit()">
+        </div>
+        <div id="divI5">
+            <a href="./all.html"><img id="imgI2" src="./images/navbarALL.png"></a>
+        </div>
+        <div id="divI6">
+            <a href="./africa.html"><img id="imgI3" src="./images/navbarAFRICA.png"></a>
+            <a href="./asia.html"><img id="imgI4" src="./images/navbarASIA.png"></a>
+        </div>
+        <div id="divI7">
+            <a href="./australia.html"><img id="imgI5" src="./images/navbarAUSTRALIA.png"></a>
+            <a href="./europe.html"><img id="imgI6" src="./images/navbarEUROPE.png"></a>
+        </div>
+        <div id="divI8">
+            <a href="./northamerica.html"><img id="imgI7" src="./images/navbarNORTH.png"></a>
+            <a href="./southamerica.html"><img id="imgI8" src="./images/navbarSOUTH.png"></a>
+        </div>
+    </div>
+    <nav id="navI0">
+        <div id="divI9">
+            <!-- imgI9 and imgI10 are the mobile view top bar with the logo and menu button -->
+            <img id="imgI9" src="./images/mobileLogo.png">
+            <img id="imgI10" src="./images/menu.png" onclick="mobileNav()">
+            <!-- divI10 is the normal view top bar with the logo and login/shopping cart buttons -->
+            <div id="divI10">
+                <p id="pI0">gl &nbsp;&nbsp;&nbsp;&nbsp;bal</p>
+                <img id="imgI11" src="./images/O.png">
+                <img id="imgI12" src="./images/coffee.png">
+            </div>
+            <!-- divI11 is the normal view login and shopping cart buttons -->
+            <div id="divI11">
+                <a href="./login.html"><img id="imgI13" src="./images/person.png"></a>
+                <img id="imgI14" onclick="view()" src="./images/cart.png">
+                <span id="spanI2" onclick="view()"></span>
+            </div>
+        </div>
+        <!-- divI12 is the normal view navbar and the main navbar -->
+        <div id="divI12">
+            <nav id="navI1">
+                <ul id="ulI1">
+                  <li id="liI4" class="liNAVBAR"><a class="aNAVBAR" id="aI0" href="./index.html">Home</a></li>
+                  <li id="liI5" class="liNAVBAR"><a class="aNAVBAR" id="aI1" href="./all.html">Coffees & Teas</a><div id="divI13">
+                    <a href="./all.html"><img id="imgI15" src="./images/navbarALL.png"></a><a href="./africa.html">
+                        <img id="imgI16" src="./images/navbarAFRICA.png"></a><a href="./asia.html"><img id="imgI17" src="./images/navbarASIA.png"></a>
+                    <a href="./australia.html"><img id="imgI18" src="./images/navbarAUSTRALIA.png"></a><a href="./europe.html">
+                        <img id="imgI19" src="./images/navbarEUROPE.png"></a><a href="./northamerica.html"><img id="imgI20" src="./images/navbarNORTH.png">
+                    </a><a href="./southamerica.html"><img id="imgI21" src="./images/navbarSOUTH.png"></a></div></li>
+                  <li id="liI6" class="liNAVBAR"><a class="aNAVBAR" id="aI2" href="./subscription.html">Subscription</a></li>
+                  <li id="liI7" class="liNAVBAR"><a class="aNAVBAR" id="aI3" href="./about.html">About</a></li>
+                </ul>
+            </nav> 
+        </div>
+        <!-- divI14 is the shopping cart and a lot of what the script.js file is based around -->
+        <div id="divI14">
+            <div id="divI15">
+                <img id="imgI22" src="./images/shopcart.png">
+                <img id="imgI23" onclick="clearDiv()" src="./images/exit.png">
+            </div>
+            <div id="divI16">
+                <h1 id="h1I1">Total:</h1>
+                <h2 id="h2I1">$</h2>
+                <h3 id="h3I1">0.00</h3>
+            </div>
+        </div>
+        <!-- divI17 is the half transparent film that covers the screen when the normal view shopping cart is acticated -->
+        <div id="divI17" onclick="clearDiv()">
+        </div>
+    </nav>
+    <div id="divH0">
+        <div id="divH1">
+            <img id="imgH0" src="./images/banner1.png">
+            <img id="imgH1" src="./images/banner2.png">
+            <img id="imgH2" src="./images/banner3.png">
+        </div>
+        <a href="./africa.html">
+        <div id="divH2">
+            <img id="imgH3" src="./images/africaBLACK.png">
+            <img id="imgH4" src="./images/africaYELLOW.png">
+            <span id="spanH0">AFRICA</span>
+        </div>
+        </a>
+        <a href="./australia.html">
+        <div id="divH3">
+            <img id="imgH5" src="./images/australiaBLACK.png">
+            <img id="imgH6" src="./images/australiaYELLOW.png">
+            <span id="spanH1">AUSTRALIA</span>
+        </div>
+        </a>
+        <a href="./southamerica.html">
+        <div id="divH4">
+            <span id="spanH2">SOUTH</span>
+            <img id="imgH7" src="./images/southAMERICAblack.png">
+            <img id="imgH8" src="./images/southAMERICAyellow.png">
+            <span id="spanH3">AMERICA</span>
+        </div>
+        </a>
+        <a href="./europe.html">
+        <div id="divH5">
+            <img id="imgH9" src="./images/europeBLACK.png">
+            <img id="imgH10" src="./images/europeYELLOW.png">
+            <span id="spanH4">EUROPE</span>
+        </div>
+        </a>
+        <a href="./asia.html">
+        <div id="divH6">
+            <img id="imgH11" src="./images/asiaBLACK.png">
+            <img id="imgH12" src="./images/asiaYELLOW.png">
+            <span id="spanH5">ASIA</span>
+        </div>
+        </a>
+        <a href="./northamerica.html">
+        <div id="divH7">
+            <span id="spanH6">NORTH</span>
+            <img id="imgH13" src="./images/northAMERICAblack.png">
+            <img id="imgH14" src="./images/northAMERICAyellow.png">
+            <span id="spanH7">AMERICA</span>
+        </div>
+        </a>
+        <div id="divH8">
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Account</title>
+</head>
+<body style="display: flex; flex-direction: row; justify-content: space-between; background-color: blue;">
+  <p></p>
+  <div style="color: red; background-color: aqua;">
+  <h2>Create Account</h2>
+  <!-- this form allows the user to create an account to be able to login to the system -->
+  <form action="/create" method="POST">
+    <div>
+      <label for="alias">Username:</label>
+      <input type="text" id="alias" name="alias" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit">Create Account</button>
+  </form>
+  </div>
+  <p></p>
+</body>
+</html>

@@ -1,0 +1,240 @@
+
+
+
+<!-- refer to index.html and styles.css pages for notes regarding element construction and organization -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@600&family=Carter+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&family=Vast+Shadow&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="divI0">
+        <div id="divI1">
+            <img id="imgI0" src="./images/exit.png" onclick="mobileNavExit()">
+        </div>
+        <div id="divI2">
+            <a href="./login.html" style="text-decoration: none;"><button id="buttonI0">Login</button></a>
+            <button id="buttonI1" onclick="view()">Shopping<br>Cart</button>
+        </div>
+        <ul id="ulI0">
+            <a href="./index.html" style="text-decoration: none;"><li id="liI0" class="liMOBILENAV">Home</li></a>
+            <li id="liI1" class="liMOBILENAV" onclick="mobileItems()">Coffees & Teas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></li>
+            <a href="./subscription.html" style="text-decoration: none;"><li id="liI2" class="liMOBILENAV">Subscription</li></a>
+            <a href="./about.html" style="text-decoration: none;"><li id="liI3" class="liMOBILENAV">About</li></a>
+        </ul>
+    </div>
+    <div id="divI3">
+        <div id="divI4">
+            <img id="imgI1" src="./images/exit.png" onclick="mobileItemsExit()">
+        </div>
+        <div id="divI5">
+            <a href="./all.html"><img id="imgI2" src="./images/navbarALL.png"></a>
+        </div>
+        <div id="divI6">
+            <a href="./africa.html"><img id="imgI3" src="./images/navbarAFRICA.png"></a>
+            <a href="./asia.html"><img id="imgI4" src="./images/navbarASIA.png"></a>
+        </div>
+        <div id="divI7">
+            <a href="./australia.html"><img id="imgI5" src="./images/navbarAUSTRALIA.png"></a>
+            <a href="./europe.html"><img id="imgI6" src="./images/navbarEUROPE.png"></a>
+        </div>
+        <div id="divI8">
+            <a href="./northamerica.html"><img id="imgI7" src="./images/navbarNORTH.png"></a>
+            <a href="./southamerica.html"><img id="imgI8" src="./images/navbarSOUTH.png"></a>
+        </div>
+    </div>
+    <nav id="navI0">
+        <div id="divI9">
+            <img id="imgI9" src="./images/mobileLogo.png">
+            <img id="imgI10" src="./images/menu.png" onclick="mobileNav()">
+            <div id="divI10">
+                <p id="pI0">gl &nbsp;&nbsp;&nbsp;&nbsp;bal</p>
+                <img id="imgI11" src="./images/O.png">
+                <img id="imgI12" src="./images/coffee.png">
+            </div>
+            <div id="divI11">
+                <a href="./login.html"><img id="imgI13" src="./images/person.png"></a>
+                <img id="imgI14" onclick="view()" src="./images/cart.png">
+                <span id="spanI2" onclick="view()"></span>
+            </div>
+        </div>
+        <div id="divI12">
+            <nav id="navI1">
+                <ul id="ulI1">
+                  <li id="liI4" class="liNAVBAR"><a class="aNAVBAR" id="aI0" href="./index.html">Home</a></li>
+                  <!-- fix img numbering -->
+                  <li id="liI5" class="liNAVBAR"><a class="aNAVBAR" id="aI1" href="./all.html">Coffees & Teas</a><div id="divI13">
+                    <a href="./all.html"><img id="imgI15" src="./images/navbarALL.png"></a><a href="./africa.html">
+                        <img id="imgI16" src="./images/navbarAFRICA.png"></a><a href="./asia.html"><img id="imgI17" src="./images/navbarASIA.png"></a>
+                    <a href="./australia.html"><img id="imgI18" src="./images/navbarAUSTRALIA.png"></a><a href="./europe.html">
+                        <img id="imgI19" src="./images/navbarEUROPE.png"></a><a href="./northamerica.html"><img id="imgI20" src="./images/navbarNORTH.png">
+                    </a><a href="./southamerica.html"><img id="imgI21" src="./images/navbarSOUTH.png"></a></div></li>
+                  <li id="liI6" class="liNAVBAR"><a class="aNAVBAR" id="aI2" href="./subscription.html">Subscription</a></li>
+                    <!-- <div id="divI6"></div></li> -->
+                  <li id="liI7" class="liNAVBAR"><a class="aNAVBAR" id="aI3" href="./about.html">About</a></li>
+                </ul>
+            </nav> 
+        </div>
+        <div id="divI14">
+            <div id="divI15">
+                <img id="imgI22" src="./images/shopcart.png">
+                <img id="imgI23" onclick="clearDiv()" src="./images/exit.png">
+            </div>
+            <div id="divI16">
+                <h1 id="h1I1">Total:</h1>
+                <h2 id="h2I1">$</h2>
+                <h3 id="h3I1">0.00</h3>
+            </div>
+        </div>
+        <div id="divI17" onclick="clearDiv()">
+        </div>
+        <!-- added these to remove the uncaught error-->
+        <img id="imgH1" style="display: none;">
+        <img id="imgH2" style="display: none;">
+        <!-- added these to remove the uncaught error-->
+    </nav>
+    <div id="divA1">
+        <!-- added these to remove the uncaught error caused by the Javascript scroll functions that target the homepage elements -->
+        <div id="divH3" style="display: none;"></div>
+        <div id="divH4" style="display: none;"></div>
+        <div id="divH5" style="display: none;"></div>
+        <div id="divH6" style="display: none;"></div>
+        <div id="divH7" style="display: none;"></div>
+        <!-- added these to remove the uncaught error caused by the Javascript scroll functions that target the homepage elements -->
+        <div id="divA2">
+            <!-- can possibly remove the class="add" for all of the divs -->
+            <div id="divA3">
+                <span id="spanA1">Australia Coffees & Teas</span>
+                <div id="divAITEM5" class="divAITEMS">
+                    <img id="imgAITEM5" class="imgAITEMS" src="./images/aussieBREW1.png">
+                    <img id="imgAITEM5a" class="imgAITEMS" src="./images/aussieBREW2.png">
+                    <span id="spanAITEM1">
+                        <h1 id="h1AITEM1text">Aussie Brew</h1>
+                        <h2 id="h2AITEM1price">$20.99</h2>
+                        <button id="buttonAITEM1" class="add" onclick="newest('#divAITEM5')">Add To Cart</button>
+                    </span>
+                    <h3 id="h3AITEMspecial">New Arrival</h3>
+                </div>
+                <div id="divAITEM12" class="divAITEMS">
+                    <img id="imgAITEM12" class="imgAITEMS" src="./images/chokkieBEAN1.png">
+                    <img id="imgAITEM12a" class="imgAITEMS" src="./images/chokkieBEAN2.png">
+                    <span id="spanAITEM1">
+                        <h1 id="h1AITEM1text">Chokkie Bean</h1>
+                        <h2 id="h2AITEM1price">$23.99</h2>
+                        <button id="buttonAITEM1" class="add" onclick="newest('#divAITEM12')">Add To Cart</button>
+                    </span>
+                </div>
+                <div id="divAITEM19" class="divAITEMS">
+                    <img id="imgAITEM19" class="imgAITEMS" src="./images/decafBLEND1.png">
+                    <img id="imgAITEM19a" class="imgAITEMS" src="./images/decafBLEND2.png">
+                    <span id="spanAITEM1">
+                        <h1 id="h1AITEM1text">Decaf Blend</h1>
+                        <h2 id="h2AITEM1price">$21.50</h2>
+                        <button id="buttonAITEM1" class="add" onclick="newest('#divAITEM19')">Add To Cart</button>
+                    </span>
+                </div>
+                <div id="divAITEM32" class="divAITEMS">
+                    <img id="imgAITEM32" class="imgAITEMS" src="./images/decafROO1.png">
+                    <img id="imgAITEM32a" class="imgAITEMS" src="./images/decafROO2.png">
+                    <span id="spanAITEM1">
+                        <h1 id="h1AITEM1text">Decaf Roo</h1>
+                        <h2 id="h2AITEM1price">$20.99</h2>
+                        <button id="buttonAITEM1" class="add" onclick="newest('#divAITEM32')">Add To Cart</button>
+                    </span>
+                </div>
+                <div id="divAITEM37" class="divAITEMS">
+                    <img id="imgAITEM37" class="imgAITEMS" src="./images/dingoBLEND1.png">
+                    <img id="imgAITEM37a" class="imgAITEMS" src="./images/dingoBLEND2.png">
+                    <span id="spanAITEM1">
+                        <h1 id="h1AITEM1text">Dingo Blend</h1>
+                        <h2 id="h2AITEM1price">$21.99</h2>
+                        <button id="buttonAITEM1" class="add" onclick="newest('#divAITEM37')">Add To Cart</button>
+                    </span>
+                </div>
+                <div id="divAITEM38" class="divAITEMS">
+                    <img id="imgAITEM38" class="imgAITEMS" src="./images/dragonESPRESSO1.png">
+                    <img id="imgAITEM38a" class="imgAITEMS" src="./images/dragonESPRESSO2.png">
+                    <span id="spanAITEM1">
+                        <h1 id="h1AITEM1text">Dragon Espresso</h1>
+                        <h2 id="h2AITEM1price">$18.99</h2>
+                        <button id="buttonAITEM1" class="add" onclick="newest('#divAITEM38')">Add To Cart</button>
+                    </span>
+                </div>
+                <div id="divAITEM39" class="divAITEMS">
+                    <img id="imgAITEM39" class="imgAITEMS" src="./images/dragonLEAF1.png">
+                    <img id="imgAITEM39a" class="imgAITEMS" src="./images/dragonLEAF2.png">
+                    <span id="spanAITEM1">
+                        <h1 id="h1AITEM1text">Dragon Leaf</h1>
+                        <h2 id="h2AITEM1price">$20.99</h2>
+                        <button id="buttonAITEM1" class="add" onclick="newest('#divAITEM39')">Add To Cart</button>
+                    </span>
+                </div>
+                <div id="divAITEM44" class="divAITEMS">
+                    <img id="imgAITEM44" class="imgAITEMS" src="./images/farmlandROO1.png">
+                    <img id="imgAITEM44a" class="imgAITEMS" src="./images/farmlandROO2.png">
+                    <span id="spanAITEM1">
+                        <h1 id="h1AITEM1text">Farmland Roo</h1>
+                        <h2 id="h2AITEM1price">$21.99</h2>
+                        <button id="buttonAITEM1" class="add" onclick="newest('#divAITEM44')">Add To Cart</button>
+                    </span>
+                </div>
+                <div id="divAITEM46" class="divAITEMS">
+                    <img id="imgAITEM46" class="imgAITEMS" src="./images/ginsengYAKKA1.png">
+                    <img id="imgAITEM46a" class="imgAITEMS" src="./images/ginsengYAKKA2.png">
+                    <span id="spanAITEM1">
+                        <h1 id="h1AITEM1text">Ginseng Yakka</h1>
+                        <h2 id="h2AITEM1price">$21.99</h2>
+                        <button id="buttonAITEM1" class="add" onclick="newest('#divAITEM46')">Add To Cart</button>
+                    </span>
+                    <h3 id="h3AITEMspecial" style="background-color: rgb(90, 90, 90);">Limited Supply</h3>
+                </div>
+                <div id="divAITEM54" class="divAITEMS">
+                    <img id="imgAITEM54" class="imgAITEMS" src="./images/komodoROAST1.png">
+                    <img id="imgAITEM54a" class="imgAITEMS" src="./images/komodoROAST2.png">
+                    <span id="spanAITEM1">
+                        <h1 id="h1AITEM1text">Komodo Roast</h1>
+                        <h2 id="h2AITEM1price">$21.99</h2>
+                        <button id="buttonAITEM1" class="add" onclick="newest('#divAITEM54')">Add To Cart</button>
+                    </span>
+                </div>
+                <div id="divAITEM56" class="divAITEMS">
+                    <img id="imgAITEM56" class="imgAITEMS" src="./images/lemonMYRTLE1.png">
+                    <img id="imgAITEM56a" class="imgAITEMS" src="./images/lemonMYRTLE2.png">
+                    <span id="spanAITEM1">
+                        <h1 id="h1AITEM1text">Lemon Myrtle</h1>
+                        <h2 id="h2AITEM1price">$18.50</h2>
+                        <button id="buttonAITEM1" class="add" onclick="newest('#divAITEM56')">Add To Cart</button>
+                    </span>
+                </div>
+                <div id="divAITEM68" class="divAITEMS">
+                    <img id="imgAITEM68" class="imgAITEMS" src="./images/strayaMAINLAND1.png">
+                    <img id="imgAITEM68a" class="imgAITEMS" src="./images/strayaMAINLAND2.png">
+                    <span id="spanAITEM1">
+                        <h1 id="h1AITEM1text">Straya Mainland</h1>
+                        <h2 id="h2AITEM1price">$20.99</h2>
+                        <button id="buttonAITEM1" class="add" onclick="newest('#divAITEM68')">Add To Cart</button>
+                    </span>
+                    <h3 id="h3AITEMspecial" style="background-color: rgb(247, 176, 70);">Top Seller</h3>
+                </div>
+                <div id="divAITEM74" class="divAITEMS">
+                    <img id="imgAITEM74" class="imgAITEMS" src="./images/yakkaHARVEST1.png">
+                    <img id="imgAITEM74a" class="imgAITEMS" src="./images/yakkaHARVEST2.png">
+                    <span id="spanAITEM1">
+                        <h1 id="h1AITEM1text">Yakka Harvest</h1>
+                        <h2 id="h2AITEM1price">$20.50</h2>
+                        <button id="buttonAITEM1" class="add" onclick="newest('#divAITEM74')">Add To Cart</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>

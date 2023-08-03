@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body style="display: flex; flex-direction: row; justify-content: space-between; background-color: blue;">
+  <p></p>
+  <div style="color: red; background-color: aqua;">
+  <h2>Login</h2>
+  <!-- this forms allows the user to login to the system -->
+  <form action="/login" method="POST">
+    <div>
+      <label for="alias">Username:</label>
+      <input type="text" id="alias" name="alias" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit">Login</button>
+  </form>
+  <a href="create.html">Create Account</a>
+  </div>
+  <p></p>
+</body>

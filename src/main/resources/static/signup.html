@@ -1,0 +1,145 @@
+
+
+
+<!-- refer to index.html and styles.css pages for notes regarding element construction and organization -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@600&family=Carter+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&family=Vast+Shadow&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="divI0">
+        <div id="divI1">
+            <img id="imgI0" src="./images/exit.png" onclick="mobileNavExit()">
+        </div>
+        <div id="divI2">
+            <a href="./login.html" style="text-decoration: none;"><button id="buttonI0">Login</button></a>
+            <button id="buttonI1" onclick="view()">Shopping<br>Cart</button>
+        </div>
+        <ul id="ulI0">
+            <a href="./index.html" style="text-decoration: none;"><li id="liI0" class="liMOBILENAV">Home</li></a>
+            <li id="liI1" class="liMOBILENAV" onclick="mobileItems()">Coffees & Teas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></li>
+            <a href="./subscription.html" style="text-decoration: none;"><li id="liI2" class="liMOBILENAV">Subscription</li></a>
+            <a href="./about.html" style="text-decoration: none;"><li id="liI3" class="liMOBILENAV">About</li></a>
+        </ul>
+    </div>
+    <div id="divI3">
+        <div id="divI4">
+            <img id="imgI1" src="./images/exit.png" onclick="mobileItemsExit()">
+        </div>
+        <div id="divI5">
+            <a href="./all.html"><img id="imgI2" src="./images/navbarALL.png"></a>
+        </div>
+        <div id="divI6">
+            <a href="./africa.html"><img id="imgI3" src="./images/navbarAFRICA.png"></a>
+            <a href="./asia.html"><img id="imgI4" src="./images/navbarASIA.png"></a>
+        </div>
+        <div id="divI7">
+            <a href="./australia.html"><img id="imgI5" src="./images/navbarAUSTRALIA.png"></a>
+            <a href="./europe.html"><img id="imgI6" src="./images/navbarEUROPE.png"></a>
+        </div>
+        <div id="divI8">
+            <a href="./northamerica.html"><img id="imgI7" src="./images/navbarNORTH.png"></a>
+            <a href="./southamerica.html"><img id="imgI8" src="./images/navbarSOUTH.png"></a>
+        </div>
+    </div>
+    <nav id="navI0">
+        <div id="divI9">
+            <img id="imgI9" src="./images/mobileLogo.png">
+            <img id="imgI10" src="./images/menu.png" onclick="mobileNav()">
+            <div id="divI10">
+                <p id="pI0">gl &nbsp;&nbsp;&nbsp;&nbsp;bal</p>
+                <img id="imgI11" src="./images/O.png">
+                <img id="imgI12" src="./images/coffee.png">
+            </div>
+            <div id="divI11">
+                <a href="./login.html"><img id="imgI13" src="./images/person.png"></a>
+                <img id="imgI14" onclick="view()" src="./images/cart.png">
+                <span id="spanI2" onclick="view()"></span>
+            </div>
+        </div>
+        <div id="divI12">
+            <nav id="navI1">
+                <ul id="ulI1">
+                  <li id="liI4" class="liNAVBAR"><a class="aNAVBAR" id="aI0" href="./index.html">Home</a></li>
+                  <!-- fix img numbering -->
+                  <li id="liI5" class="liNAVBAR"><a class="aNAVBAR" id="aI1" href="./all.html">Coffees & Teas</a><div id="divI13">
+                    <a href="./all.html"><img id="imgI15" src="./images/navbarALL.png"></a><a href="./africa.html">
+                        <img id="imgI16" src="./images/navbarAFRICA.png"></a><a href="./asia.html"><img id="imgI17" src="./images/navbarASIA.png"></a>
+                    <a href="./australia.html"><img id="imgI18" src="./images/navbarAUSTRALIA.png"></a><a href="./europe.html">
+                        <img id="imgI19" src="./images/navbarEUROPE.png"></a><a href="./northamerica.html"><img id="imgI20" src="./images/navbarNORTH.png">
+                    </a><a href="./southamerica.html"><img id="imgI21" src="./images/navbarSOUTH.png"></a></div></li>
+                  <li id="liI6" class="liNAVBAR"><a class="aNAVBAR" id="aI2" href="./subscription.html">Subscription</a></li>
+                    <!-- <div id="divI6"></div></li> -->
+                  <li id="liI7" class="liNAVBAR"><a class="aNAVBAR" id="aI3" href="./about.html">About</a></li>
+                </ul>
+            </nav> 
+        </div>
+        <div id="divI14">
+            <div id="divI15">
+                <img id="imgI22" src="./images/shopcart.png">
+                <img id="imgI23" onclick="clearDiv()" src="./images/exit.png">
+            </div>
+            <div id="divI16">
+                <h1 id="h1I1">Total:</h1>
+                <h2 id="h2I1">$</h2>
+                <h3 id="h3I1">0.00</h3>
+            </div>
+        </div>
+        <div id="divI17" onclick="clearDiv()">
+        </div>
+        <!-- added these to remove the uncaught error-->
+        <img id="imgH1" style="display: none;">
+        <img id="imgH2" style="display: none;">
+        <!-- added these to remove the uncaught error-->
+    </nav>
+    <div id="divLogSig1">
+        <!-- added these to remove the uncaught error caused by the Javascript scroll functions that target the homepage elements -->
+        <div id="divH3" style="display: none;"></div>
+        <div id="divH4" style="display: none;"></div>
+        <div id="divH5" style="display: none;"></div>
+        <div id="divH6" style="display: none;"></div>
+        <div id="divH7" style="display: none;"></div>
+        <!-- added these to remove the uncaught error caused by the Javascript scroll functions that target the homepage elements -->
+        <div id="divLogSig2">
+            <span id="spanLogSig1">
+                Sign Up
+            </span>
+            <form action="/create" method="POST">
+                <label for="alias">Username:</label>
+                <input type="text" id="inputLogSig1" name="alias" required><br><br><br>
+            
+                <label for="password">Password:</label>
+                <input type="password" id="inputLogSig2" name="password" required><br><br><br>
+            
+                <input type="submit" id="inputLogSig3" value="Sign Up">
+            </form>
+            <div id="divLog2">
+                <span id="spanLogSig2">
+                    Already have an account?
+                </span>
+                <a href="./login.html" id="aLogSig1">
+                    Click Here to Sign In
+                </a>
+            </div>
+        </div>
+        <span id="spanLogSig3">(The sign up feature allows new accounts to be created. &nbsp;It has very <br>
+            minimal functionality and will even allow duplicate entries. &nbsp;If the <br>
+            login fails, then a red error message will display. &nbsp;If the login is <br> 
+            successful, then a green validation message will display. &nbsp;I am aware <br>
+            that using XML files for authentication is not good practice, but it's <br>
+            the beginning for me to learning back-end development, which I <br>
+            eventually want to be able to master as well for full-stack <br>
+            development.)
+        </span>
+    </div>
+    <script src="./script.js"></script>
+</body>

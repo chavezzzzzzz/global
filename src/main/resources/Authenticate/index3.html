@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body style="display: flex; flex-direction: row; justify-content: space-between; background-color: blue;">
+  <p></p>
+  <div style="color: red; background-color: aqua;">
+    <h5 style="color: green">Username and Password have been created.  Please enter them into the forms below to be authorized.</h5>
+    <!-- this form confirms to the user that their account was successfully created -->
+  <h2>Login</h2>
+  <form action="/login" method="POST">
+    <div>
+      <label for="alias">Username:</label>
+      <input type="text" id="alias" name="alias" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit">Login</button>
+  </form>
+  <a href="create.html">Create Account</a>
+  </div>
+  <p></p>
+</body>
+</html>
